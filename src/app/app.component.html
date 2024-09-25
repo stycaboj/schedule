@@ -2,10 +2,12 @@
 <ng-container *ngIf="lightOrDark">
 
   <!-- HEADER -->
-  <div class="flex justify-center bg-white text-black">
-    <div class="flex justify-between items-center md:max-w-[72.5rem] max-w-[18.75rem] h-[5.625rem] w-full md:text-sm text-[0.625rem] mx-[1.875rem]">
+  <div class="md:static fixed top-0 left-0 w-full z-10 flex justify-center bg-white text-black">
+    <div
+      class="flex justify-between items-center md:max-w-[72.5rem] max-w-[18.75rem] md:h-[5.625rem] h-[2.8125rem] w-full md:text-sm text-[0.625rem] mx-[1.875rem]">
       <div class="flex justify-between md:max-w-[9.875rem] max-w-[5.9375rem] items-center w-full">
-        <img src="../assets/images/logo_black.svg" alt="" class="md:h-[3.125rem] md:w-[3.125rem] h-[1.5625rem] w-[1.5625rem]">
+        <img src="../assets/images/logo_black.svg" alt=""
+          class="md:h-[3.125rem] md:w-[3.125rem] h-[1.5625rem] w-[1.5625rem]">
         <span class="font-semibold">
           403 группа
         </span>
@@ -19,17 +21,20 @@
         <span class="font-medium">
           Светлая неделя
         </span>
-        <img src="../assets/images/switcher.png" alt="" class="cursor-pointer md:h-[3.125rem] md:w-[5rem] h-[1.5625rem] w-[2.5rem]" (click)="toggleWeek()">
+        <img src="../assets/images/switcher.png" alt=""
+          class="cursor-pointer md:h-[3.125rem] md:w-[5rem] h-[1.5625rem] w-[2.5rem]" (click)="toggleWeek()">
       </div>
     </div>
   </div>
 
   <!-- MAIN -->
   <div class="flex justify-center bg-light-gray text-black px-8">
-    <div class="justify-center flex flex-wrap md:justify-between items-center md:max-w-[72.5rem] max-w-[18.75rem] w-full">
+    <div
+      class="justify-center flex flex-wrap md:justify-between items-center md:max-w-[72.5rem] max-w-[18.75rem] w-full">
 
       <!-- CARD -->
-      <div class="flex flex-col md:mt-10 mt-4 drop-shadow-[0_0_5px_rgba(198,198,198,1)] w-[22.5rem] md:h-[32.5rem] h-[23rem]">
+      <div
+        class="flex flex-col md:mt-10 mt-4 drop-shadow-[0_0_5px_rgba(198,198,198,1)] w-[22.5rem] md:h-[32.5rem] h-[23rem]">
         <div class="flex items-center bg-white md:h-[4.5rem] h-[3.1rem] rounded-t-[0.625rem]">
           <span class="font-semibold md:text-[1.25rem] text-[0.875rem] md:ml-25 ml-4">
             Понедельник
@@ -50,11 +55,15 @@
                 <span class="font-medium md:text-sm text-[0.625rem]">
                   Ауд. 320
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Семинар
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Дунаев И.И.
                 </span>
@@ -72,11 +81,15 @@
                 <span class="font-medium md:text-sm text-[0.625rem]">
                   Ауд. 214
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Лекция
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Дунаев И.И.
                 </span>
@@ -94,11 +107,15 @@
                 <span class="font-medium md:text-sm text-[0.625rem]">
                   Ауд. 214
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Лекция
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Моисеева О.В.
                 </span>
@@ -116,11 +133,15 @@
                 <span class="font-medium md:text-sm text-[0.625rem]">
                   Ауд. 217
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Лекция
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Торопкин С.А.
                 </span>
@@ -131,7 +152,8 @@
       </div>
 
       <!-- CARD -->
-      <div class="flex flex-col md:mt-10 mt-4 drop-shadow-[0_0_5px_rgba(198,198,198,1)] w-[22.5rem] md:h-[32.5rem] h-[23rem]">
+      <div
+        class="flex flex-col md:mt-10 mt-4 drop-shadow-[0_0_5px_rgba(198,198,198,1)] w-[22.5rem] md:h-[32.5rem] h-[23rem]">
         <div class="flex items-center bg-white md:h-[4.5rem] h-[3.1rem] rounded-t-[0.625rem]">
           <span class="font-semibold md:text-[1.25rem] text-[0.875rem] md:ml-25 ml-4">
             Вторник
@@ -152,11 +174,15 @@
                 <span class="font-medium md:text-sm text-[0.625rem]">
                   Ауд. 211
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Семинар
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Грачева О.С.
                 </span>
@@ -174,11 +200,15 @@
                 <span class="font-medium md:text-sm text-[0.625rem]">
                   Ауд. 211
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Семинар
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Горшенков А.Г.
                 </span>
@@ -196,11 +226,15 @@
                 <span class="font-medium md:text-sm text-[0.625rem]">
                   Ауд. 315
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Лекция
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Грачева О.С.
                 </span>
@@ -218,11 +252,15 @@
                 <span class="font-medium md:text-sm text-[0.625rem]">
                   Ауд. 203
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Семинар
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Волчкова А.А.
                 </span>
@@ -233,7 +271,8 @@
       </div>
 
       <!-- CARD -->
-      <div class="flex flex-col md:mt-10 mt-4 drop-shadow-[0_0_5px_rgba(198,198,198,1)] w-[22.5rem] md:h-[32.5rem] h-[18rem]">
+      <div
+        class="flex flex-col md:mt-10 mt-4 drop-shadow-[0_0_5px_rgba(198,198,198,1)] w-[22.5rem] md:h-[32.5rem] h-[18rem]">
         <div class="flex items-center bg-white md:h-[4.5rem] h-[3.1rem] rounded-t-[0.625rem]">
           <span class="font-semibold md:text-[1.25rem] text-[0.875rem] md:ml-25 ml-4">
             Среда
@@ -254,11 +293,15 @@
                 <span class="font-medium md:text-sm text-[0.625rem]">
                   Ауд. 320
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Семинар
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Попкова Ж.Г.
                 </span>
@@ -276,11 +319,15 @@
                 <span class="font-medium md:text-sm text-[0.625rem]">
                   Ауд. 320
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Лекция
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Попкова Ж.Г.
                 </span>
@@ -298,11 +345,15 @@
                 <span class="font-medium md:text-sm text-[0.625rem]">
                   Ауд. 302
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Семинар
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Цветков А.Н.
                 </span>
@@ -313,7 +364,8 @@
       </div>
 
       <!-- CARD -->
-      <div class="flex flex-col md:mt-10 mt-4 drop-shadow-[0_0_5px_rgba(198,198,198,1)] w-[22.5rem] md:h-[32.5rem] h-[23rem]">
+      <div
+        class="flex flex-col md:mt-10 mt-4 drop-shadow-[0_0_5px_rgba(198,198,198,1)] w-[22.5rem] md:h-[32.5rem] h-[23rem]">
         <div class="flex items-center bg-white md:h-[4.5rem] h-[3.1rem] rounded-t-[0.625rem]">
           <span class="font-semibold md:text-[1.25rem] text-[0.875rem] md:ml-25 ml-4">
             Четверг
@@ -334,11 +386,15 @@
                 <span class="font-medium md:text-sm text-[0.625rem]">
                   Ауд. 325
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Лекция
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Николаева Т.Н.
                 </span>
@@ -356,11 +412,15 @@
                 <span class="font-medium md:text-sm text-[0.625rem]">
                   Ауд. 325
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Семинар
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Никифоров М.В.
                 </span>
@@ -378,11 +438,15 @@
                 <span class="font-medium md:text-sm text-[0.625rem]">
                   Ауд. 214
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Семинар
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Каразанова О.О.
                 </span>
@@ -400,11 +464,15 @@
                 <span class="font-medium md:text-sm text-[0.625rem]">
                   Ауд. 214
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Семинар
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Малышева Е.Ю.
                 </span>
@@ -415,7 +483,8 @@
       </div>
 
       <!-- CARD -->
-      <div class="flex flex-col md:mt-10 mt-4 drop-shadow-[0_0_5px_rgba(198,198,198,1)] w-[22.5rem] md:h-[32.5rem] h-[18rem]">
+      <div
+        class="flex flex-col md:mt-10 mt-4 drop-shadow-[0_0_5px_rgba(198,198,198,1)] w-[22.5rem] md:h-[32.5rem] h-[18rem]">
         <div class="flex items-center bg-white md:h-[4.5rem] h-[3.1rem] rounded-t-[0.625rem]">
           <span class="font-semibold md:text-[1.25rem] text-[0.875rem] md:ml-25 ml-4">
             Пятница
@@ -436,11 +505,15 @@
                 <span class="font-medium md:text-sm text-[0.625rem]">
                   Ауд. 203
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Семинар
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Моисеева О.В.
                 </span>
@@ -458,11 +531,15 @@
                 <span class="font-medium md:text-sm text-[0.625rem]">
                   Ауд. 214
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Лекция
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Никифоров М.В.
                 </span>
@@ -480,7 +557,9 @@
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Практическое занятие
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-black opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Гунина Е.В.
                 </span>
@@ -794,10 +873,12 @@
 <ng-container *ngIf="!lightOrDark">
 
   <!-- HEADER -->
-  <div class="flex justify-center bg-black text-white">
-    <div class="flex justify-between items-center md:max-w-[72.5rem] max-w-[18.75rem] h-[5.625rem] w-full md:text-sm text-[0.625rem] mx-[1.875rem]">
+  <div class="md:static fixed top-0 left-0 w-full z-10 flex justify-center bg-black text-white">
+    <div
+      class="flex justify-between items-center md:max-w-[72.5rem] max-w-[18.75rem] h-[5.625rem] w-full md:text-sm text-[0.625rem] mx-[1.875rem]">
       <div class="flex justify-between md:max-w-[9.875rem] max-w-[5.9375rem] items-center w-full">
-        <img src="../assets/images/logo_white.svg" alt="" class="md:h-[3.125rem] md:w-[3.125rem] h-[1.5625rem] w-[1.5625rem]">
+        <img src="../assets/images/logo_white.svg" alt=""
+          class="md:h-[3.125rem] md:w-[3.125rem] h-[1.5625rem] w-[1.5625rem]">
         <span class="font-semibold">
           403 группа
         </span>
@@ -811,17 +892,20 @@
         <span class="font-medium">
           Тёмная неделя
         </span>
-        <img src="../assets/images/switcher_dark.png" alt="" class="cursor-pointer md:h-[3.125rem] md:w-[5rem] h-[1.5625rem] w-[2.5rem]" (click)="toggleWeek()">
+        <img src="../assets/images/switcher_dark.png" alt=""
+          class="cursor-pointer md:h-[3.125rem] md:w-[5rem] h-[1.5625rem] w-[2.5rem]" (click)="toggleWeek()">
       </div>
     </div>
   </div>
 
   <!-- MAIN -->
   <div class="flex justify-center bg-[#1C1C1C] text-white px-8">
-    <div class="justify-center flex flex-wrap md:justify-between items-center md:max-w-[72.5rem] max-w-[18.75rem] w-full">
+    <div
+      class="justify-center flex flex-wrap md:justify-between items-center md:max-w-[72.5rem] max-w-[18.75rem] w-full">
 
       <!-- CARD -->
-      <div class="flex flex-col md:mt-10 mt-4 drop-shadow-[0_0_5px_rgba(198,198,198,1)] w-[22.5rem] md:h-[32.5rem] h-[13rem]">
+      <div
+        class="flex flex-col md:mt-10 mt-4 drop-shadow-[0_0_5px_rgba(198,198,198,1)] w-[22.5rem] md:h-[32.5rem] h-[13rem]">
         <div class="flex items-center bg-black md:h-[4.5rem] h-[3.1rem] rounded-t-[0.625rem]">
           <span class="font-semibold md:text-[1.25rem] text-[0.875rem] md:ml-25 ml-4">
             Понедельник
@@ -842,11 +926,15 @@
                 <span class="font-medium md:text-sm text-[0.625rem]">
                   Ауд. 214
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Лекция
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Малышева Е.Ю.
                 </span>
@@ -864,11 +952,15 @@
                 <span class="font-medium md:text-sm text-[0.625rem]">
                   Ауд. 214
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Лекция
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Торопкин С.А.
                 </span>
@@ -879,7 +971,8 @@
       </div>
 
       <!-- CARD -->
-      <div class="flex flex-col md:mt-10 mt-4 drop-shadow-[0_0_5px_rgba(198,198,198,1)] w-[22.5rem] md:h-[32.5rem] h-[23rem]">
+      <div
+        class="flex flex-col md:mt-10 mt-4 drop-shadow-[0_0_5px_rgba(198,198,198,1)] w-[22.5rem] md:h-[32.5rem] h-[23rem]">
         <div class="flex items-center bg-black md:h-[4.5rem] h-[3.1rem] rounded-t-[0.625rem]">
           <span class="font-semibold md:text-[1.25rem] text-[0.875rem] md:ml-25 ml-4">
             Вторник
@@ -900,11 +993,15 @@
                 <span class="font-medium md:text-sm text-[0.625rem]">
                   Ауд. 211
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Семинар
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Грачева О.С.
                 </span>
@@ -922,11 +1019,15 @@
                 <span class="font-medium md:text-sm text-[0.625rem]">
                   Ауд. 211
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Семинар
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Горшенков А.Г.
                 </span>
@@ -944,11 +1045,15 @@
                 <span class="font-medium md:text-sm text-[0.625rem]">
                   Ауд. 315
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Лекция
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Горшенков А.Г.
                 </span>
@@ -966,11 +1071,15 @@
                 <span class="font-medium md:text-sm text-[0.625rem]">
                   Ауд. 203
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Лекция
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Волчкова А.А.
                 </span>
@@ -981,7 +1090,8 @@
       </div>
 
       <!-- CARD -->
-      <div class="flex flex-col md:mt-10 mt-4 drop-shadow-[0_0_5px_rgba(198,198,198,1)] w-[22.5rem] md:h-[32.5rem] h-[18rem]">
+      <div
+        class="flex flex-col md:mt-10 mt-4 drop-shadow-[0_0_5px_rgba(198,198,198,1)] w-[22.5rem] md:h-[32.5rem] h-[18rem]">
         <div class="flex items-center bg-black md:h-[4.5rem] h-[3.1rem] rounded-t-[0.625rem]">
           <span class="font-semibold md:text-[1.25rem] text-[0.875rem] md:ml-25 ml-4">
             Среда
@@ -1002,11 +1112,15 @@
                 <span class="font-medium md:text-sm text-[0.625rem]">
                   Ауд. 320
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Семинар
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Попкова Ж.Г.
                 </span>
@@ -1024,11 +1138,15 @@
                 <span class="font-medium md:text-sm text-[0.625rem]">
                   Ауд. 303
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Лекция
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Цветков А.Н.
                 </span>
@@ -1046,11 +1164,15 @@
                 <span class="font-medium md:text-sm text-[0.625rem]">
                   Ауд. 302
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Семинар
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Дунаев И.И.
                 </span>
@@ -1061,7 +1183,8 @@
       </div>
 
       <!-- CARD -->
-      <div class="flex flex-col md:mt-10 mt-4 drop-shadow-[0_0_5px_rgba(198,198,198,1)] w-[22.5rem] md:h-[32.5rem] h-[23rem]">
+      <div
+        class="flex flex-col md:mt-10 mt-4 drop-shadow-[0_0_5px_rgba(198,198,198,1)] w-[22.5rem] md:h-[32.5rem] h-[23rem]">
         <div class="flex items-center bg-black md:h-[4.5rem] h-[3.1rem] rounded-t-[0.625rem]">
           <span class="font-semibold md:text-[1.25rem] text-[0.875rem] md:ml-25 ml-4">
             Четверг
@@ -1082,11 +1205,15 @@
                 <span class="font-medium md:text-sm text-[0.625rem]">
                   Ауд. 325
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Лекция
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Николаева Т.Н.
                 </span>
@@ -1104,11 +1231,15 @@
                 <span class="font-medium md:text-sm text-[0.625rem]">
                   Ауд. 325
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Семинар
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Никифоров М.В.
                 </span>
@@ -1126,11 +1257,15 @@
                 <span class="font-medium md:text-sm text-[0.625rem]">
                   Ауд. 214
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Лекция
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Каразанова О.О.
                 </span>
@@ -1148,11 +1283,15 @@
                 <span class="font-medium md:text-sm text-[0.625rem]">
                   Ауд. 214
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Семинар
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Малышева Е.Ю.
                 </span>
@@ -1163,7 +1302,8 @@
       </div>
 
       <!-- CARD -->
-      <div class="flex flex-col md:mt-10 mt-4 drop-shadow-[0_0_5px_rgba(198,198,198,1)] w-[22.5rem] md:h-[32.5rem] h-[18rem]">
+      <div
+        class="flex flex-col md:mt-10 mt-4 drop-shadow-[0_0_5px_rgba(198,198,198,1)] w-[22.5rem] md:h-[32.5rem] h-[18rem]">
         <div class="flex items-center bg-black md:h-[4.5rem] h-[3.1rem] rounded-t-[0.625rem]">
           <span class="font-semibold md:text-[1.25rem] text-[0.875rem] md:ml-25 ml-4">
             Пятница
@@ -1184,11 +1324,15 @@
                 <span class="font-medium md:text-sm text-[0.625rem]">
                   Ауд. 203
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Семинар
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Моисеева О.В.
                 </span>
@@ -1206,11 +1350,15 @@
                 <span class="font-medium md:text-sm text-[0.625rem]">
                   Ауд. 314
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Лекция
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Каразанова О.О.
                 </span>
@@ -1228,7 +1376,9 @@
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Практическое занятие
                 </span>
-                <div class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2"></div>
+                <div
+                  class="md:h-[0.25rem] md:w-[0.25rem] h-[0.125rem] w-[0.125rem] bg-white opacity-70 rounded-full md:mx-[0.625rem] mx-2">
+                </div>
                 <span class="font-normal md:text-sm text-[0.625rem]">
                   Гунина Е.В.
                 </span>
@@ -1253,7 +1403,8 @@
 
   <!-- LINE -->
   <div class="flex justify-center bg-[#1C1C1C] px-8">
-    <div class="bg-s-gray h-[0.0625rem] md:my-[2.5rem] my-3 md:max-w-[72.5rem] max-w-[18.75rem] w-full opacity-70"></div>
+    <div class="bg-s-gray h-[0.0625rem] md:my-[2.5rem] my-3 md:max-w-[72.5rem] max-w-[18.75rem] w-full opacity-70">
+    </div>
   </div>
 
   <div class="flex flex-wrap justify-center bg-[#1C1C1C] text-white px-8">
@@ -1326,10 +1477,10 @@
         </div>
         <div class="flex flex-wrap mt-4">
           <div
-          class="md:w-[4.375rem] md:h-[4.375rem] flex flex-col justify-center items-center w-[2.1875rem] h-[2.1875rem] bg-[#3B3B3B] rounded-full md:mr-[0.9375rem] mr-[0.8rem] mb-[0.625rem]">
-          <span class="font-semibold md:text-[1.25rem] text-[0.625rem]">7</span>
-          <span class="font-normal md:text-[0.875rem] text-[0.4375rem]">ПН</span>
-        </div>
+            class="md:w-[4.375rem] md:h-[4.375rem] flex flex-col justify-center items-center w-[2.1875rem] h-[2.1875rem] bg-[#3B3B3B] rounded-full md:mr-[0.9375rem] mr-[0.8rem] mb-[0.625rem]">
+            <span class="font-semibold md:text-[1.25rem] text-[0.625rem]">7</span>
+            <span class="font-normal md:text-[0.875rem] text-[0.4375rem]">ПН</span>
+          </div>
           <div
             class="md:w-[4.375rem] md:h-[4.375rem] flex flex-col justify-center items-center w-[2.1875rem] h-[2.1875rem] bg-[#3B3B3B] rounded-full md:mr-[0.9375rem] mr-[0.8rem] mb-[0.625rem]">
             <span class="font-semibold md:text-[1.25rem] text-[0.625rem]">8</span>
