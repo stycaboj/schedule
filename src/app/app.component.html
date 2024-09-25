@@ -2,7 +2,7 @@
 <ng-container *ngIf="lightOrDark">
 
   <!-- HEADER -->
-  <div class="md:static fixed top-0 left-0 w-full z-10 flex justify-center bg-white text-black">
+  <div class="fixed top-0 left-0 w-full z-10 flex justify-center bg-white text-black">
     <div
       class="flex justify-between items-center md:max-w-[72.5rem] max-w-[18.75rem] md:h-[5.625rem] h-[2.8125rem] w-full md:text-sm text-[0.625rem] mx-[1.875rem]">
       <div class="flex justify-between md:max-w-[9.875rem] max-w-[5.9375rem] items-center w-full">
@@ -21,7 +21,7 @@
         <span class="font-medium">
           Светлая неделя
         </span>
-        <img src="../assets/images/switcher.png" alt=""
+        <img src="../assets/images/switcher_light.png" alt=""
           class="cursor-pointer md:h-[3.125rem] md:w-[5rem] h-[1.5625rem] w-[2.5rem]" (click)="toggleWeek()">
       </div>
     </div>
@@ -873,7 +873,7 @@
 <ng-container *ngIf="!lightOrDark">
 
   <!-- HEADER -->
-  <div class="md:static fixed top-0 left-0 w-full z-10 flex justify-center bg-black text-white">
+  <div class="fixed top-0 left-0 w-full z-10 flex justify-center bg-black text-white">
     <div
       class="flex justify-between items-center md:max-w-[72.5rem] max-w-[18.75rem] md:h-[5.625rem] h-[2.8125rem] w-full md:text-sm text-[0.625rem] mx-[1.875rem]">
       <div class="flex justify-between md:max-w-[9.875rem] max-w-[5.9375rem] items-center w-full">
@@ -1407,7 +1407,7 @@
     </div>
   </div>
 
-  <div class="flex flex-wrap justify-center bg-[#1C1C1C] text-white px-8">
+  <div class="flex justify-center bg-[#1C1C1C] text-white px-8">
     <!-- MONTH -->
     <div
       class="flex bg-dark-black drop-shadow-[0_0_5px_rgba(198,198,198,1)] rounded-[0.625rem] md:max-w-[72.5rem] max-w-[18.75rem] w-full md:mb-25 mb-4">
@@ -1653,7 +1653,7 @@
 
   <!-- MADE BY -->
   <div class="flex flex-col justify-center items-center bg-[#1C1C1C] px-8">
-    <div class="md:hidden flex bg-s-gray h-[0.0625rem] my-2 max-w-[4rem] w-full"></div>
+    <div class="md:hidden bg-s-gray h-[0.0625rem] max-w-[4rem] w-full"></div>
     <div class="flex justify-center md:max-w-[72.5rem] max-w-[18.75rem] w-full mb-[2rem]">
       <div class="hidden md:flex bg-s-gray h-[0.0625rem] my-[2.5rem] max-w-[25rem] min-w-0 flex-1 opacity-70"></div>
       <div class="text-white flex items-center md:text-sm text-[0.625rem] font-normal mx-[0.9375rem]">
