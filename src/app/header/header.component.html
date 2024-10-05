@@ -1,0 +1,37 @@
+<div class="fixed top-0 left-0 w-full z-10 flex justify-center bg-white text-black font-semibold drop-shadow-[0_0_5px_rgba(198,198,198,1)]">
+    <div class="flex justify-between items-center md:max-w-[72.5rem] max-w-[18.75rem] md:h-[5.625rem] h-[2.8125rem] w-full md:text-sm text-[0.625rem] mx-[1.875rem]">
+        <div class="flex justify-between md:max-w-[36rem] max-w-[5.9375rem] items-center w-full">
+            <img src="../assets/images/logo_black.svg" class="md:h-[3.125rem] md:w-[3.125rem] h-[1.5625rem] w-[1.5625rem]">
+            <div class="flex justify-between max-w-[29.125rem] w-full">
+                <a [routerLink]="['/schedule']" class="flex items-center opacity-50" routerLinkActive="opacity-100">
+                    <img src="../../assets/images/shapka_icon.svg" class="w-6 h-6">
+                    <span class="ml-[0.938rem]">
+                        Занятия
+                    </span>
+                </a>
+                <a [routerLink]="['/session']" class="flex items-center opacity-50" routerLinkActive="opacity-100">
+                    <img src="../../assets/images/session_icon.svg" class="w-6 h-6">
+                    <span class="ml-[0.938rem]">
+                        Сессия
+                    </span>
+                </a>
+                <a [routerLink]="['/weeks']" class="flex items-center opacity-50" routerLinkActive="opacity-100">
+                    <img src="../../assets/images/calendar_icon.svg" class="w-6 h-6">
+                    <span class="ml-[0.938rem]">
+                        Чередование недель
+                    </span>
+                </a>
+            </div>
+        </div>
+        <div class="flex justify-between md:max-w-[8.75rem] max-w-[4rem] items-center w-full">
+            <span>
+                Группа
+            </span>
+            <div class="flex justify-center items-center w-[4.438rem] h-[2.5rem] border-[0.0625rem] rounded-[2.5rem]">
+                <span>
+                    403
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
