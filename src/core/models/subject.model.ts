@@ -1,8 +1,8 @@
-export interface Subject {
+export interface SubjectModel {
     id: number;
     time: string;
     name: string;
-    room: number;
-    tupe: string;
+    room: string;
+    type: string;
     teacher: string;
 }
