@@ -1,33 +1,34 @@
-<div
-    class="fixed top-0 left-0 w-full z-10 flex justify-center bg-white text-black font-semibold drop-shadow-[0_0_5px_rgba(198,198,198,1)]">
-    <div
-        class="flex justify-between items-center md:max-w-[72.5rem] max-w-[18.75rem] md:h-[5.625rem] h-[2.8125rem] w-full md:text-sm text-[0.625rem] mx-[1.875rem]">
+<div class="wrapper-container fixed top-0 left-0 w-full z-10 flex justify-center font-semibold">
+    <div class="inner-container md:h-[5.625rem] h-[2.8125rem] md:text-sm text-[0.625rem]">
         <div class="flex justify-between md:max-w-[36rem] max-w-[5.9375rem] items-center w-full">
-            <img src="../assets/images/logo_black.svg"
+            <img [src]="isLightWeek() ? '../assets/images/logo_black.svg' : '../assets/images/logo_white.svg'"
                 class="md:h-[3.125rem] md:w-[3.125rem] h-[1.5625rem] w-[1.5625rem]">
             <div class="flex justify-between max-w-[29.125rem] w-full">
                 <a [routerLink]="['/schedule']" class="flex items-center opacity-50" routerLinkActive="!opacity-100">
-                    <img src="../../assets/images/lessons_icon.svg" class="w-6 h-6">
+                    <img [src]="isLightWeek() ? '../../assets/images/lessons_icon.svg' : '../../assets/images/lessons_icon_white.svg'"
+                        class="w-6 h-6">
                     <span class="ml-[0.938rem]">
                         Занятия
                     </span>
                 </a>
-                <a [routerLink]="['/weeks']" class="flex items-center opacity-50" routerLinkActive="!opacity-100">
-                    <img src="../../assets/images/calendar_icon.svg" class="w-6 h-6">
-                    <span class="ml-[0.938rem]">
-                        Чередование недель
-                    </span>
-                </a>
                 <a [routerLink]="['/session']" class="flex items-center opacity-50" routerLinkActive="!opacity-100">
-                    <img src="../../assets/images/session_icon.svg" class="w-6 h-6">
+                    <img [src]="isLightWeek() ? '../../assets/images/session_icon.svg' : '../../assets/images/session_icon_white.svg'"
+                        class="w-6 h-6">
                     <span class="ml-[0.938rem]">
                         Сессия
+                    </span>
+                </a>
+                <a [routerLink]="['/calendar']" class="flex items-center opacity-50" routerLinkActive="!opacity-100">
+                    <img [src]="isLightWeek() ? '../../assets/images/calendar_icon.svg' : '../../assets/images/calendar_icon_white.svg'"
+                        class="w-6 h-6">
+                    <span class="ml-[0.938rem]">
+                        Чередование недель
                     </span>
                 </a>
             </div>
         </div>
         <div class="flex justify-between max-w-[11.125rem] items-center w-full">
-            <mat-form-field>
+            <mat-form-field [ngClass]="isLightWeek() ? 'light-select' : 'dark-select'">
                 <mat-select placeholder="Выбрать группу">
                     @for (group of iterableGroups; track group.id) {
                     <mat-option [value]="group.id">{{ group.name }}</mat-option>

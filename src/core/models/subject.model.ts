@@ -6,3 +6,5 @@ export interface SubjectModel {
     type: string;
     teacher: string;
 }
+
+// TODO мб сделать id времени, пары, названия дня и т.д.

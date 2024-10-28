@@ -3,7 +3,10 @@
 @use '@angular/material' as mat;
 // Plus imports for other components in your app.
 @import './assets/styles/colors';
+@import './assets/styles/fonts';
 @import './assets/styles/material';
+@import './assets/styles/containers';
+@import './assets/styles/theme';
 
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.

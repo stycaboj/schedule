@@ -1,0 +1,16 @@
+.wrapper-container {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.light-week {
+    opacity: var(--week-light-opacity);
+}
+
+.dark-week {
+    opacity: var(--week-dark-opacity);
+}
+
+.divider {
+    background-color: var(--mat-option-border-color);
+}
