@@ -9,7 +9,6 @@
     </div>
     @for (subject of day().subjects; track subject.id; let dayIndex = $index) {
     <div class="card__main">
-        <div>
             <div class="time">
                 {{ subject.time }}
             </div>
@@ -29,7 +28,6 @@
                     {{ subject.teacher }}
                 </div>
             </div>
-        </div>
         @if ($index < day().subjects.length - 1) {
             <mat-divider class="divider"></mat-divider>
         }

@@ -1,22 +1,30 @@
 @import '../../schedule.component.scss';
 
 :host {
-    display: block;
-    width: 100%;
+    display: flex;
+    height: 100%;
 }
 
 .card {
     border-radius: 0.625rem;
+    padding-bottom: 40px;
     margin-bottom: 2.5rem;
     height: 100%;
-    min-height: 415px; /* Базовая высота для 3 предметов */
+
+    &[data-subjects="2"] {
+        max-height: 300px;
+    }
+
+    &[data-subjects="3"] {
+        max-height: 415px;
+    }
 
     &[data-subjects="4"] {
-        min-height: 530px;
+        max-height: 530px;
     }
 
     &[data-subjects="5"] {
-        min-height: 645px;
+        max-height: 645px;
     }
 }
 
@@ -25,7 +33,7 @@
     justify-content: space-between;
     align-items: center;
     padding-left: 1.5625rem;
-    padding-right: 1.5625rem;
+    padding-right: 32px;
     height: 3.75rem;
     width: 22.5rem;
     border-top-left-radius: 0.625rem;
@@ -43,32 +51,16 @@
 .card__main {
     display: flex;
     flex-direction: column;
-    padding-left: 1.5625rem;
-    padding-right: 1.5625rem;
-    padding-bottom: 1.5625rem;
+    padding: 16px 24px 0 24px;
 
     &:last-child {
         border-bottom-left-radius: 0.625rem;
         border-bottom-right-radius: 0.625rem;
     }
 
-    > div:first-child {
-        display: flex;
-        flex-direction: column;
-        margin-top: 1.5625rem;
-        margin-bottom: 1.5625rem;
-
-        @media (min-width: 768px) {
-            height: 4rem;
-        }
-
-        @media (max-width: 767px) {
-            height: 2.75rem;
-        }
-    }
-
     .time {
         font-weight: 600;
+        padding-top: 1px;
 
         @media (min-width: 768px) {
             font-size: 1.25rem;
@@ -81,6 +73,7 @@
 
     .name {
         font-size: 0.875rem;
+        padding-top: 2px;
 
         @media (max-width: 767px) {
             font-size: 0.625rem;
@@ -90,6 +83,7 @@
     .details {
         display: flex;
         align-items: center;
+        padding-top: 4px;
 
         @media (min-width: 768px) {
             font-size: 0.875rem;
@@ -128,11 +122,8 @@
     font-weight: 500;
 }
 
-.opacity-50 {
-    opacity: 0.5;
-}
-
 :host ::ng-deep mat-divider {
+    margin-top: 18px;
     width: 310px;
     height: 1px;
     color: #DADADA !important;

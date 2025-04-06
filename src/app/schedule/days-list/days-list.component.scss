@@ -2,9 +2,11 @@
 
 .inner-container {
     display: grid;
+    align-items: stretch;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+    gap: 40px;
     width: 100%;
+    grid-auto-rows: 1fr;
 
     @media (max-width: 768px) {
         grid-template-columns: 1fr;
