@@ -1,0 +1,140 @@
+@import '../../schedule.component.scss';
+
+:host {
+    display: block;
+    width: 100%;
+}
+
+.card {
+    border-radius: 0.625rem;
+    margin-bottom: 2.5rem;
+    height: 100%;
+    min-height: 415px; /* Базовая высота для 3 предметов */
+
+    &[data-subjects="4"] {
+        min-height: 530px;
+    }
+
+    &[data-subjects="5"] {
+        min-height: 645px;
+    }
+}
+
+.card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1.5625rem;
+    padding-right: 1.5625rem;
+    height: 3.75rem;
+    width: 22.5rem;
+    border-top-left-radius: 0.625rem;
+    border-top-right-radius: 0.625rem;
+
+    @media (min-width: 768px) {
+        font-size: 0.875rem;
+    }
+
+    @media (max-width: 767px) {
+        font-size: 0.625rem;
+    }
+}
+
+.card__main {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1.5625rem;
+    padding-right: 1.5625rem;
+    padding-bottom: 1.5625rem;
+
+    &:last-child {
+        border-bottom-left-radius: 0.625rem;
+        border-bottom-right-radius: 0.625rem;
+    }
+
+    > div:first-child {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1.5625rem;
+        margin-bottom: 1.5625rem;
+
+        @media (min-width: 768px) {
+            height: 4rem;
+        }
+
+        @media (max-width: 767px) {
+            height: 2.75rem;
+        }
+    }
+
+    .time {
+        font-weight: 600;
+
+        @media (min-width: 768px) {
+            font-size: 1.25rem;
+        }
+
+        @media (max-width: 767px) {
+            font-size: 0.875rem;
+        }
+    }
+
+    .name {
+        font-size: 0.875rem;
+
+        @media (max-width: 767px) {
+            font-size: 0.625rem;
+        }
+    }
+
+    .details {
+        display: flex;
+        align-items: center;
+
+        @media (min-width: 768px) {
+            font-size: 0.875rem;
+        }
+
+        @media (max-width: 767px) {
+            font-size: 0.625rem;
+        }
+    }
+}
+
+.subject-divider {
+    opacity: 0.7;
+    border-radius: 9999px;
+
+    @media (min-width: 768px) {
+        height: 0.25rem;
+        width: 0.25rem;
+        margin-left: 0.625rem;
+        margin-right: 0.625rem;
+    }
+
+    @media (max-width: 767px) {
+        height: 0.125rem;
+        width: 0.125rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+.opacity-50 {
+    opacity: 0.5;
+}
+
+:host ::ng-deep mat-divider {
+    width: 310px;
+    height: 1px;
+    color: #DADADA !important;
+    border: none;
+}

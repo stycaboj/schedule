@@ -1,22 +1,8 @@
-<div class="wrapper-container flex flex-col justify-center items-center">
+<div class="wrapper-container flex flex-col items-center">
     <div class="flex justify-between my-10 max-w-[17.5rem] font-medium text-sm w-full">
         <button class="light-week" (click)="setLightWeek()">Светлая неделя</button>
         <div class="divider h-6 w-[0.0625rem]"></div>
         <button class="dark-week" (click)="setDarkWeek()">Тёмная неделя</button>
     </div>
-    <div class="inner-container md:justify-between justify-center flex-wrap">
-        <div class="shadow-card rounded-[0.625rem]">
-            <div class="flex justify-between">
-                <div class="text-black">
-                    Среда
-                </div>
-                <div>
-                    13 nojabra
-                </div>
-            </div>
-            <div>
-
-            </div>
-        </div>
-    </div>
+    <app-days-list [days]="days()"></app-days-list>
 </div>

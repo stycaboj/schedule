@@ -3,8 +3,6 @@
     --header-background-color: #{$white-color};
     --text-color: #{$black-color};
     --header-shadow: 0 3px 10px #{$s-gray-color};
-    --week-light-opacity: 1;
-    --week-dark-opacity: 0.5;
     --mat-select-placeholder-text-color: #{$black-color};
     --mat-select-enabled-trigger-text-color: #{$black-color};
     --mdc-filled-text-field-container-color: #{$white-color};
@@ -14,6 +12,11 @@
     --mat-option-selected-state-label-text-color: #{$black-color};
     --mat-select-panel-background-color: #{$white-color};
     --mat-option-selected-state-layer-color: #{$select-gray-color};
+    --week-light-opacity: 1;
+    --week-dark-opacity: 0.5;
+    --card-shadow: 0 3px 10px 2px #{$s-gray-color};
+    --card-header-background-color: #{$white-color};
+    --card-main-background-color: #{$gray-color};
 }
 
 .dark-theme {
@@ -21,8 +24,6 @@
     --header-background-color: #{$black-color};
     --text-color: #{$white-color};
     --header-shadow: 0 3px 5px #{$c-gray-color};
-    --week-light-opacity: 0.5;
-    --week-dark-opacity: 1;
     --mat-select-field-shadow: 0 2px 3px 0 #{$c-gray-color};
     --mat-option-border-color: #{$c-gray-color};
     --mat-select-placeholder-text-color: #{$white-color};
@@ -32,4 +33,9 @@
     --mat-option-selected-state-label-text-color: #{$white-color};
     --mat-select-panel-background-color: #{$black-color};
     --mat-option-selected-state-layer-color: #{$c-gray-color};
+    --week-light-opacity: 0.5;
+    --week-dark-opacity: 1;
+    --card-shadow: 0 3px 5px 2px #{$c-gray-color};
+    --card-header-background-color: #{$black-color};
+    --card-main-background-color: #{$dark-black-color};
 }

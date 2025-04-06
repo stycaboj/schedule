@@ -14,3 +14,20 @@
 .divider {
     background-color: var(--mat-option-border-color);
 }
+
+.card {
+    box-shadow: var(--card-shadow);
+}
+
+.card__header {
+    background-color: var(--card-header-background-color);
+    color: var(--text-color);
+}
+
+.card__main {
+    background-color: var(--card-main-background-color);
+}
+
+.subject-divider {
+    background-color: var(--text-color);
+}

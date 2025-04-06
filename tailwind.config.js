@@ -21,9 +21,6 @@ module.exports = {
       margin: {
         '25': '1.5625rem',
       },
-      boxShadow: {
-        'card': '0 3px 10px 2px rgba(218,218,218,1)',
-      },
     },
   },
   plugins: [],
