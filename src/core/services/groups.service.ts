@@ -9,6 +9,7 @@ import { GroupModel } from '../models/group.model';
 export class GroupsService {
   private selectedGroupId$ = new BehaviorSubject<string | null>(null);
   private apiUrl = 'http://localhost:3000';
+  private isUserLoggedIn$ = new BehaviorSubject<boolean>(false);
 
   constructor(private readonly httpClient: HttpClient) {}
 

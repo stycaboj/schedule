@@ -2,14 +2,18 @@
 
 :host {
     display: flex;
+    box-sizing: border-box;
     height: 100%;
 }
 
 .card {
     border-radius: 0.625rem;
     padding-bottom: 40px;
-    margin-bottom: 2.5rem;
     height: 100%;
+
+    &[data-subjects="1"] {
+        max-height: 185px;
+    }
 
     &[data-subjects="2"] {
         max-height: 300px;
@@ -25,6 +29,10 @@
 
     &[data-subjects="5"] {
         max-height: 645px;
+    }
+
+    @media (max-width: 767px) {
+        width: 300px;
     }
 }
 
@@ -45,6 +53,9 @@
 
     @media (max-width: 767px) {
         font-size: 0.625rem;
+        height: 36px;
+        width: 300px;
+        padding: 0 15px;
     }
 }
 
@@ -77,6 +88,7 @@
 
         @media (max-width: 767px) {
             font-size: 0.625rem;
+            padding-top: 0;
         }
     }
 
@@ -91,7 +103,12 @@
 
         @media (max-width: 767px) {
             font-size: 0.625rem;
+            padding-top: 2px;
         }
+    }
+
+    @media (max-width: 767px) {
+        padding: 10px 15px;
     }
 }
 
@@ -128,4 +145,9 @@
     height: 1px;
     color: #DADADA !important;
     border: none;
+
+    @media (max-width: 767px) {
+        width: 270px;
+        margin-top: 10px;
+    }
 }

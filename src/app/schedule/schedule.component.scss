@@ -18,11 +18,12 @@
 
 .card {
     box-shadow: var(--card-shadow);
+    background-color: var(--card-main-background-color);
 }
 
 .card__header {
     background-color: var(--card-header-background-color);
-    color: var(--text-color);
+    color: var(--card-header-text-color);
 }
 
 .card__main {

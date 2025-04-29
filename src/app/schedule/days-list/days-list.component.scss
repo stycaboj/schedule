@@ -3,6 +3,7 @@
 .inner-container {
     display: grid;
     align-items: stretch;
+    padding-bottom: 40px;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
     width: 100%;
