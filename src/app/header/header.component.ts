@@ -1,57 +1,65 @@
-import { ChangeDetectionStrategy, Component, computed, OnDestroy, OnInit, signal } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
-import { MatSelectModule } from '@angular/material/select';
-import { GroupsService } from '../../core/services/groups.service';
-import { GroupModel } from '../../core/models/group.model';
-import { WeekService } from '../../core/services/week.service';
-import { CommonModule, NgClass } from '@angular/common';
-import { BehaviorSubject, Observable, Subject, takeUntil } from 'rxjs';
+import {
+    ChangeDetectionStrategy,
+    Component,
+    OnDestroy,
+    OnInit,
+} from "@angular/core";
+import { MatSelectModule } from "@angular/material/select";
+import { GroupsService } from "../../core/services/groups.service";
+import { GroupModel } from "../../core/models/group.model";
+import { WeekService } from "../../core/services/week.service";
+import { CommonModule, NgClass } from "@angular/common";
+import { BehaviorSubject, Observable, Subject, takeUntil } from "rxjs";
+import { SelectedGroupService } from "../../core/services/selected-group.service";
 
 @Component({
-  selector: 'app-header',
-  standalone: true,
-  imports: [RouterLink, RouterLinkActive, MatSelectModule, NgClass, CommonModule],
-  templateUrl: './header.component.html',
-  styleUrl: './header.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: "app-header",
+    standalone: true,
+    imports: [MatSelectModule, NgClass, CommonModule],
+    templateUrl: "./header.component.html",
+    styleUrl: "./header.component.scss",
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent implements OnInit, OnDestroy {
-  public groups$ = new BehaviorSubject<Array<GroupModel> | null>(null);
-  public selectedGroup$ = new BehaviorSubject<string | null>(null);
-  public isLightWeek$: Observable<boolean>; // TODO: лучше ли это
-  private destroy$ = new Subject();
+    public groups$ = new BehaviorSubject<Array<GroupModel> | null>(null);
+    public selectedGroup$ = new BehaviorSubject<string | null>(null);
+    public isLightWeek$: Observable<boolean>; // TODO: лучше ли это
+    private destroy$ = new Subject();
 
-  constructor(
-    private readonly groupsService: GroupsService,
-    private readonly weekService: WeekService
-  ) {
-    this.isLightWeek$ = this.weekService.getWeek();
-  }
-
-  public ngOnInit(): void {
-    console.log(this.selectedGroup$);
-    this.getGroupsList();
-    const storedGroup = localStorage.getItem('storedGroup');
-    if (storedGroup) {
-      this.selectedGroup$.next(storedGroup);
-      console.log(storedGroup)
+    constructor(
+        private readonly groupsService: GroupsService,
+        private readonly weekService: WeekService,
+        private readonly selectedGroupService: SelectedGroupService
+    ) {
+        this.isLightWeek$ = this.weekService.getWeek();
     }
-  }
 
-  public ngOnDestroy(): void {
-    this.destroy$.next(null);
-    this.destroy$.complete();
-  }
+    public ngOnInit(): void {
+        this.getGroupsList();
+        const storedGroup = localStorage.getItem("selectedGroup");
+        if (storedGroup) {
+            this.selectedGroup$.next(storedGroup);
+            this.selectedGroupService.setSelectedGroup(storedGroup);
+        }
+    }
 
-  public getGroupsList(): void {
-    this.groupsService
-      .get()
-      .pipe(takeUntil(this.destroy$))
-      .subscribe((items) => this.groups$.next(items));
-  }
+    public ngOnDestroy(): void {
+        this.destroy$.next(null);
+        this.destroy$.complete();
+    }
 
-  public onGroupChange(groupId: string): void {
-    this.selectedGroup$.next(groupId);
-    this.groupsService.saveSelectedGroup(groupId);
-  }
+    public getGroupsList(): void {
+        this.groupsService
+            .get()
+            .pipe(takeUntil(this.destroy$))
+            .subscribe((groups) => {
+                this.groups$.next(groups);
+            });
+    }
+
+    public onGroupChange(groupId: string): void {
+        this.selectedGroup$.next(groupId);
+        this.selectedGroupService.setSelectedGroup(groupId);
+        this.groupsService.saveSelectedGroup(groupId);
+    }
 }

@@ -8,28 +8,34 @@ import { Observable } from "rxjs";
 export class FirebaseService {
     constructor(private firestore: AngularFirestore) {}
 
-    // Создание нового документа
-    create(collection: string, data: any) {
+    public getGroups(): Observable<any[]> {
+        return this.firestore.collection('groups').valueChanges({ idField: 'id' });
+    }
+
+    public getDaysByGroup(groupId: string): Observable<any[]> {
+        return this.firestore.collection('days', ref =>
+            ref.where('groupId', '==', groupId)
+              .orderBy('date', 'asc')  // Сортировка по дате (от старых к новым)
+        ).valueChanges({ idField: 'docId' });  // Добавляем ID документа в данные
+    }
+
+    public create(collection: string, data: any) {
         return this.firestore.collection(collection).add(data);
     }
 
-    // Получение всех документов из коллекции
-    getAll(collection: string): Observable<any[]> {
+    public getAll(collection: string): Observable<any[]> {
         return this.firestore.collection(collection).valueChanges();
     }
 
-    // Получение документа по ID
-    getById(collection: string, id: string): Observable<any> {
+    public getById(collection: string, id: string): Observable<any> {
         return this.firestore.collection(collection).doc(id).valueChanges();
     }
 
-    // Обновление документа
-    update(collection: string, id: string, data: any) {
+    public update(collection: string, id: string, data: any) {
         return this.firestore.collection(collection).doc(id).update(data);
     }
 
-    // Удаление документа
-    delete(collection: string, id: string) {
+    public delete(collection: string, id: string) {
         return this.firestore.collection(collection).doc(id).delete();
     }
 }

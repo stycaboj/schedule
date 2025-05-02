@@ -6,6 +6,7 @@ import { DayModel } from "../../core/models/day.model";
 import { DaysListComponent } from "./days-list/days-list.component";
 import { Subject, takeUntil } from "rxjs";
 import { FirebaseService } from "../../core/services/firebase.service";
+import { SelectedGroupService } from "../../core/services/selected-group.service";
 
 @Component({
     selector: "app-schedule",
@@ -19,20 +20,30 @@ export class ScheduleComponent implements OnInit, OnDestroy {
     public days = signal<DayModel[]>([]);
     private readonly destroy$ = new Subject<void>();
     private readonly firebaseService: FirebaseService = inject(FirebaseService);
+    private readonly selectedGroupService: SelectedGroupService = inject(SelectedGroupService);
 
     constructor() {}
 
     public ngOnInit(): void {
-        this.firebaseService.getAll('days')
+        this.selectedGroupService.getSelectedGroup()
             .pipe(takeUntil(this.destroy$))
-            .subscribe({
-                next: (firebaseDays) => {
-                    console.log('Дни из Firebase:', firebaseDays);
-                    this.days.set(firebaseDays);
-                },
-                error: (error) => {
-                    console.error('Ошибка при получении дней:', error);
+            .subscribe(groupId => {
+                if (!groupId) {
+                    console.warn('Группа не выбрана');
+                    return;
                 }
+                
+                this.firebaseService.getDaysByGroup(groupId)
+                    .pipe(takeUntil(this.destroy$))
+                    .subscribe({
+                        next: (firebaseDays) => {
+                            console.log('Дни из Firebase:', firebaseDays);
+                            this.days.set(firebaseDays);
+                        },
+                        error: (error) => {
+                            console.error('Ошибка при получении дней:', error);
+                        }
+                    });
             });
     }
 
