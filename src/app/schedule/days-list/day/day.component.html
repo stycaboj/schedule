@@ -1,10 +1,10 @@
 <div class="card" [attr.data-subjects]="day().subjects.length">
     <div class="card__header">
         <div class="font-semibold">
-            {{ day().name }}
+            {{ (getDate(day().date) | date: 'EEEE') | titlecase }}
         </div>
         <div class="font-semibold opacity-50">
-            {{ day().date }}
+            {{ getDate(day().date) | date: 'd MMMM' }}
         </div>
     </div>
     @for (subject of day().subjects; track subject.id; let dayIndex = $index) {
