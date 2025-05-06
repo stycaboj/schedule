@@ -40,6 +40,7 @@ export class WeekService {
     const weekDiff = Math.floor(
       (date.getTime() - this.dataService.getStartOfWeek(firstSeptember).getTime()) / (7 * 24 * 60 * 60 * 1000)
     );
-    return weekDiff % 2 === 0;
+    // return weekDiff % 2 === 0;
+    return true;
   }
 }

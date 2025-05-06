@@ -8,6 +8,7 @@ import { AngularFirestoreModule } from "@angular/fire/compat/firestore";
 import { environment } from "../environments/environment";
 import { registerLocaleData } from "@angular/common";
 import localeRu from "@angular/common/locales/ru";
+import { provideNativeDateAdapter } from "@angular/material/core";
 
 registerLocaleData(localeRu);
 
@@ -17,6 +18,7 @@ export const appConfig: ApplicationConfig = {
         provideAnimationsAsync(),
         provideHttpClient(),
         { provide: LOCALE_ID, useValue: 'ru' },
+        provideNativeDateAdapter(),
         importProvidersFrom(
             AngularFireModule.initializeApp(environment.firebase),
             AngularFirestoreModule

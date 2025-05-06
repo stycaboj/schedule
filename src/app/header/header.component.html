@@ -1,6 +1,6 @@
 <div class="wrapper-container fixed top-0 left-0 w-full z-10 flex justify-center font-semibold">
     <div class="inner-container md:h-[5.625rem] h-[2.8125rem] md:text-sm text-[0.625rem] w-full">
-        <div class="flex justify-between md:max-w-[180px] max-w-[5.9375rem] w-full">
+        <div class="flex justify-between">
             <img [src]="'../assets/images/logo_black.svg'"
                 class="md:h-[3.125rem] md:w-[3.125rem] h-[1.5625rem] w-[1.5625rem]">
         </div>
@@ -14,12 +14,11 @@
             </mat-form-field>
         </div>
         <div class="calendar-switcher">
-            <div class="calendar-switcher__text">
-                {{ (isLightWeek$ | async) ? 'Светлая неделя' : 'Тёмная неделя' }}
-            </div>
-            <button class="calendar-switcher__button">
+            <button class="calendar-switcher__button" (click)="datePicker.open()">
                 <img [src]="(isLightWeek$ | async) ? '../assets/images/calendar_switcher_icon_black.svg' : '../assets/images/calendar_switcher_icon_white.svg'">
             </button>
+            <input [matDatepicker]="datePicker" matDatepickerInput (dateChange)="onDateSelected($event)" hidden>
+            <mat-datepicker #datePicker></mat-datepicker>
         </div>
     </div>
 </div>
