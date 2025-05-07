@@ -17,4 +17,9 @@ export class DayComponent {
     public getDate(timestamp: Timestamp): Date {
         return timestamp.toDate();
     }
+
+    public hasSubjects(): boolean {
+        return this.day().subjects.length > 0 && 
+               this.day().subjects.every(subject => subject !== undefined && subject !== null);
+    }
 }

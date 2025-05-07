@@ -10,18 +10,7 @@
     border-radius: 0.625rem;
     padding-bottom: 40px;
     height: 100%;
-
-    &[data-subjects="1"] {
-        max-height: 185px;
-    }
-
-    &[data-subjects="2"] {
-        max-height: 300px;
-    }
-
-    &[data-subjects="3"] {
-        max-height: 415px;
-    }
+    max-height: 415px;
 
     &[data-subjects="4"] {
         max-height: 530px;
@@ -150,4 +139,10 @@
         width: 270px;
         margin-top: 10px;
     }
+}
+
+:host .empty-state { // TODO: сделать отдельый компонент для эмпти стейта
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
 }

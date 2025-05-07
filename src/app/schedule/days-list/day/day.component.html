@@ -7,30 +7,36 @@
             {{ getDate(day().date) | date: 'd MMMM' }}
         </div>
     </div>
-    @for (subject of day().subjects; track subject.id; let dayIndex = $index) {
-    <div class="card__main">
-            <div class="time">
-                {{ subject.time }}
-            </div>
-            <div class="name">
-                {{ subject.name }}
-            </div>
-            <div class="details">
-                <div class="font-medium">
-                    {{ subject.room }}
+    @if (hasSubjects()) {
+        @for (subject of day().subjects; track subject.id; let dayIndex = $index) {
+            <div class="card__main">
+                <div class="time">
+                    {{ subject.time }}
                 </div>
-                <div class="subject-divider"></div>
-                <div>
-                    {{ subject.type }}
+                <div class="name">
+                    {{ subject.name }}
                 </div>
-                <div class="subject-divider"></div>
-                <div>
-                    {{ subject.teacher }}
+                <div class="details">
+                    <div class="font-medium">
+                        {{ subject.room }}
+                    </div>
+                    <div class="subject-divider"></div>
+                    <div>
+                        {{ subject.type }}
+                    </div>
+                    <div class="subject-divider"></div>
+                    <div>
+                        {{ subject.teacher }}
+                    </div>
                 </div>
+            @if ($index < day().subjects.length - 1) {
+                <mat-divider class="divider"></mat-divider>
+            }
             </div>
-        @if ($index < day().subjects.length - 1) {
-            <mat-divider class="divider"></mat-divider>
         }
-    </div>
+    } @else {
+        <div class="empty-state">
+            Пар нет
+        </div>
     }
 </div>
