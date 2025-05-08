@@ -1,7 +1,10 @@
 <div class="card" [attr.data-subjects]="day().subjects.length">
     <div class="card__header">
-        <div class="font-semibold">
+        <div class="font-semibold flex items-center gap-[15px]">
             {{ (getDate(day().date) | date: 'EEEE') | titlecase }}
+            @if (isEdit()) {
+                <img src="../../../../assets/images/edit-icon.svg" alt="" class="edit-icon" (click)="openEditDialog()">
+            }
         </div>
         <div class="font-semibold opacity-50">
             {{ getDate(day().date) | date: 'd MMMM' }}

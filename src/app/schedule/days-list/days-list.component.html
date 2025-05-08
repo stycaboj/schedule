@@ -1,5 +1,5 @@
 <div class="inner-container">
     @for (day of days(); track day.id; let dayIndex = $index) {
-        <app-day [day]="day"></app-day>
+        <app-day [day]="day" [isEdit]="isEdit()"></app-day>
     }
 </div>

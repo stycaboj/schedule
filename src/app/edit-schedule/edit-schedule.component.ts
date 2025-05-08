@@ -1,21 +1,21 @@
-import { ChangeDetectionStrategy, Component, inject, OnDestroy, OnInit, signal } from "@angular/core";
+import { Component, inject, signal } from "@angular/core";
 import { DayModel } from "../../core/models/day.model";
-import { DaysListComponent } from "./days-list/days-list.component";
-import { Subject, takeUntil, combineLatest } from "rxjs";
+import { combineLatest, Subject, takeUntil } from "rxjs";
 import { FirebaseService } from "../../core/services/firebase.service";
 import { SelectedGroupService } from "../../core/services/selected-group.service";
 import { DateService } from "../../core/services/date.service";
+import { DaysListComponent } from "../schedule/days-list/days-list.component";
 
 @Component({
-    selector: "app-schedule",
+    selector: "app-edit-schedule",
     standalone: true,
     imports: [DaysListComponent],
-    templateUrl: "./schedule.component.html",
-    styleUrl: "./schedule.component.scss",
-    changeDetection: ChangeDetectionStrategy.OnPush,
+    templateUrl: "./edit-schedule.component.html",
+    styleUrl: "./edit-schedule.component.scss",
 })
-export class ScheduleComponent implements OnInit, OnDestroy {
+export class EditScheduleComponent {
     public days = signal<DayModel[]>([]); // TODO: типизация везде
+    public isEdit = true;
     private readonly destroy$ = new Subject<void>();
     private readonly firebaseService: FirebaseService = inject(FirebaseService);
     private readonly selectedGroupService: SelectedGroupService = inject(SelectedGroupService);

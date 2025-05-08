@@ -1,0 +1,26 @@
+<div class="header">
+    <div class="font-semibold flex items-center gap-[15px]">
+        {{ (getDate(this.data.date) | date: 'EEEE') | titlecase }}
+        <img src="../../../../assets/images/edit-icon.svg" alt="">
+    </div>
+    <div class="font-semibold opacity-50">
+        {{ getDate(this.data.date) | date: 'd MMMM' }}
+    </div>
+</div>
+<div class="main">
+    <div class="buttons-container">
+        <div class="save-text">
+            <mat-divider></mat-divider>
+            <span>Сохранить изменения</span>
+            <mat-divider></mat-divider>
+        </div>
+        <div class="flex justify-between items-center flex-1">
+            <button class="save-button" (click)="onSave()">
+                Только для этого дня
+            </button>
+            <button class="save-button" (click)="onSave()">
+                Для всех дней
+            </button>
+        </div>
+    </div>
+</div>

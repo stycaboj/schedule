@@ -1,0 +1,54 @@
+:host {
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 1.5625rem;
+        padding-right: 32px;
+        height: 3.75rem;
+        border-top-left-radius: 0.625rem;
+        border-top-right-radius: 0.625rem;
+        font-size: 0.875rem;
+        background-color: #FFF;
+    }
+
+    .main {
+        display: flex;
+        padding: 25px;
+
+        .buttons-container {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+
+            .save-text {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-weight: 600;
+                font-size: 14px;
+                color: #303030;
+                opacity: 50%;
+                padding-bottom: 25px;
+
+                mat-divider {
+                    background-color: #DADADA;
+                    max-width: 127px;
+                }
+            }
+
+            .save-button {
+                display: flex;
+                justify-content: center;
+                font-weight: 500;
+                font-size: 14px;
+                padding: 20px 0;
+                width: 100%;
+                max-width: 217px;
+                border-radius: 5px;
+                box-shadow: var(--mat-select-field-shadow);
+                background-color: #FFF;
+            }
+        }
+    }
+}

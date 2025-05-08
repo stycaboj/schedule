@@ -4,6 +4,10 @@
     display: flex;
     box-sizing: border-box;
     height: 100%;
+
+    .edit-icon:hover {
+        cursor: pointer;
+    }
 }
 
 .card {
@@ -128,7 +132,7 @@
     font-weight: 500;
 }
 
-:host ::ng-deep mat-divider {
+::ng-deep mat-divider {
     margin-top: 18px;
     width: 310px;
     height: 1px;
@@ -141,7 +145,7 @@
     }
 }
 
-:host .empty-state { // TODO: сделать отдельый компонент для эмпти стейта
+.empty-state { // TODO: сделать отдельый компонент для эмпти стейта
     display: flex;
     justify-content: center;
     margin-top: 50px;
