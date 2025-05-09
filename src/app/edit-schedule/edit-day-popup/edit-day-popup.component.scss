@@ -14,12 +14,60 @@
 
     .main {
         display: flex;
+        flex-direction: column;
+        flex: 1;
         padding: 25px;
+
+        .subject {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            &__footer {
+                display: flex;
+                gap: 15px;
+
+                .audience {
+                    max-width: 110px;
+                }
+
+                .type {
+                    max-width: 120px;
+                }
+            }
+        }
+
+        .add-subject {
+            display: flex;
+            align-items: center;
+            padding-top: 15px;
+            justify-content: space-between;
+
+            &__button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 30px;
+                height: 30px;
+                border-radius: 100px;
+                background-color: #DADADA;
+            }
+
+            &__button:hover {
+                cursor: pointer;
+            }
+
+            mat-divider {
+                background-color: #DADADA;
+                max-width: 195px;
+                opacity: 50%;
+            }
+        }
 
         .buttons-container {
             display: flex;
             flex-direction: column;
-            flex: 1;
+            margin-top: auto;
 
             .save-text {
                 display: flex;
@@ -44,10 +92,24 @@
                 font-size: 14px;
                 padding: 20px 0;
                 width: 100%;
-                max-width: 217px;
+                max-width: 170px;
                 border-radius: 5px;
                 box-shadow: var(--mat-select-field-shadow);
                 background-color: #FFF;
+            }
+
+            .clear-button {
+                display: flex;
+                justify-content: center;
+                font-weight: 500;
+                font-size: 14px;
+                padding: 20px 0;
+                width: 100%;
+                max-width: 80px;
+                border-radius: 5px;
+                box-shadow: var(--mat-select-field-shadow);
+                color: #612e2e;
+                background-color: #ffd1d1;
             }
         }
     }

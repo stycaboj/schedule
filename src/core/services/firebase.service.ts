@@ -1,4 +1,4 @@
-import { Injectable } from "@angular/core";
+import { inject, Injectable } from "@angular/core";
 import { AngularFirestore } from "@angular/fire/compat/firestore";
 import { Observable, map } from "rxjs";
 import { DayModel } from "../models/day.model";
@@ -8,10 +8,18 @@ import { Timestamp } from "@angular/fire/firestore";
     providedIn: "root",
 })
 export class FirebaseService {
-    constructor(private firestore: AngularFirestore) {}
+    readonly firestore = inject(AngularFirestore);
 
-    public getGroups(): Observable<any[]> {
+    public getGroups(): Observable<any[]> { // TODO: все any убрать
         return this.firestore.collection('groups').valueChanges({ idField: 'id' });
+    }
+
+    public getTimes(): Observable<any[]> {
+        return this.firestore.collection('times').valueChanges({ idField: 'id' });
+    }
+
+    public getSubjectTypes(): Observable<any[]> {
+        return this.firestore.collection('subject-types').valueChanges({ idField: 'id' });
     }
 
     public getDaysByGroupAndDateRange(groupId: string, startDate: string, endDate: string): Observable<DayModel[]> {
