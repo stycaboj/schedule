@@ -149,4 +149,12 @@
     display: flex;
     justify-content: center;
     margin-top: 50px;
+
+    @media (min-width: 768px) {
+        font-size: 0.875rem;
+    }
+
+    @media (max-width: 767px) {
+        font-size: 0.7rem;
+    }
 }

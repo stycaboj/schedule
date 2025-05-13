@@ -137,16 +137,39 @@ export class FirebaseService {
         });
     }
 
-    public clearDay(dayId: string): Observable<void> {
+    public clearDay(day: DayModel): Observable<void> {
         return new Observable(observer => {
-            this.firestore.collection('days').doc(dayId).update({
-                subjects: [],
-                updatedAt: Timestamp.now()
-            }).then(() => {
-                observer.next();
-                observer.complete();
-            }).catch(error => {
-                observer.error(error);
+            const dayId = this.generateDayId(day.groupId, day.date.toDate());
+            
+            // Сначала проверяем существование документа
+            this.firestore.collection('days').doc(dayId).get().subscribe(doc => {
+                if (!doc.exists) {
+                    // Если документа нет, создаем его с пустым списком предметов
+                    this.createDay({
+                        ...day,
+                        id: dayId,
+                        subjects: []
+                    }).subscribe({
+                        next: () => {
+                            observer.next();
+                            observer.complete();
+                        },
+                        error: (error) => {
+                            observer.error(error);
+                        }
+                    });
+                } else {
+                    // Если документ существует, обновляем его
+                    this.firestore.collection('days').doc(dayId).update({
+                        subjects: [],
+                        updatedAt: Timestamp.now()
+                    }).then(() => {
+                        observer.next();
+                        observer.complete();
+                    }).catch(error => {
+                        observer.error(error);
+                    });
+                }
             });
         });
     }

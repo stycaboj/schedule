@@ -98,7 +98,7 @@ export class EditDayPopupComponent {
     }
 
     public onDelete(): void {
-        this.firebaseService.clearDay(this.data.id).subscribe({
+        this.firebaseService.clearDay(this.data).subscribe({
             next: () => {
                 this.dialogRef.close({ ...this.data, subjects: [] });
             },
