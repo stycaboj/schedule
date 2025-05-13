@@ -132,16 +132,16 @@
     font-weight: 500;
 }
 
-::ng-deep mat-divider {
-    margin-top: 18px;
-    width: 310px;
+:host ::ng-deep mat-divider {
+    margin-top: 18px !important;
+    width: 310px !important;
     height: 1px;
     color: #DADADA !important;
     border: none;
 
     @media (max-width: 767px) {
-        width: 270px;
-        margin-top: 10px;
+        width: 270px !important;
+        margin-top: 10px !important;
     }
 }
 

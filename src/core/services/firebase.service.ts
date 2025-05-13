@@ -77,4 +77,77 @@ export class FirebaseService {
     public delete(collection: string, id: string) {
         return this.firestore.collection(collection).doc(id).delete();
     }
+
+    private generateDayId(groupId: string, date: Date): string {
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const day = String(date.getDate()).padStart(2, '0');
+        return `${groupId}_${year}-${month}-${day}`;
+    }
+
+    public createDay(day: DayModel): Observable<void> {
+        return new Observable(observer => {
+            const dayId = this.generateDayId(day.groupId, day.date.toDate());
+            this.firestore.collection('days').doc(dayId).set({
+                ...day,
+                id: dayId,
+                updatedAt: Timestamp.now()
+            }).then(() => {
+                observer.next();
+                observer.complete();
+            }).catch(error => {
+                observer.error(error);
+            });
+        });
+    }
+
+    public updateDay(day: DayModel): Observable<void> {
+        return new Observable(observer => {
+            const dayId = this.generateDayId(day.groupId, day.date.toDate());
+            
+            // Сначала проверяем существование документа
+            this.firestore.collection('days').doc(dayId).get().subscribe(doc => {
+                if (!doc.exists) {
+                    // Если документа нет, создаем его
+                    this.createDay({
+                        ...day,
+                        id: dayId
+                    }).subscribe({
+                        next: () => {
+                            observer.next();
+                            observer.complete();
+                        },
+                        error: (error) => {
+                            observer.error(error);
+                        }
+                    });
+                } else {
+                    // Если документ существует, обновляем его
+                    this.firestore.collection('days').doc(dayId).update({
+                        subjects: day.subjects,
+                        updatedAt: Timestamp.now()
+                    }).then(() => {
+                        observer.next();
+                        observer.complete();
+                    }).catch(error => {
+                        observer.error(error);
+                    });
+                }
+            });
+        });
+    }
+
+    public clearDay(dayId: string): Observable<void> {
+        return new Observable(observer => {
+            this.firestore.collection('days').doc(dayId).update({
+                subjects: [],
+                updatedAt: Timestamp.now()
+            }).then(() => {
+                observer.next();
+                observer.complete();
+            }).catch(error => {
+                observer.error(error);
+            });
+        });
+    }
 }

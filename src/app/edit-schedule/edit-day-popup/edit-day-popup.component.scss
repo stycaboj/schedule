@@ -17,17 +17,44 @@
         flex-direction: column;
         flex: 1;
         padding: 25px;
+        height: calc(100vh - 3.75rem);
+        overflow: hidden;
+
+        .subjects {
+            overflow-y: auto;
+            max-height: calc(100vh - 300px);
+            padding-right: 10px;
+
+            &::-webkit-scrollbar {
+                width: 6px;
+            }
+
+            &::-webkit-scrollbar-track {
+                background: #f1f1f1;
+                border-radius: 3px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: #888;
+                border-radius: 3px;
+            }
+
+            &::-webkit-scrollbar-thumb:hover {
+                background: #555;
+            }
+        }
 
         .subject {
             display: flex;
             flex-direction: column;
             gap: 15px;
+            margin-bottom: 20px;
 
             &__footer {
                 display: flex;
                 gap: 15px;
 
-                .audience {
+                .room {
                     max-width: 110px;
                 }
 
@@ -58,6 +85,7 @@
             }
 
             mat-divider {
+                width: 100%;
                 background-color: #DADADA;
                 max-width: 195px;
                 opacity: 50%;
@@ -68,6 +96,7 @@
             display: flex;
             flex-direction: column;
             margin-top: auto;
+            padding-top: 10px;
 
             .save-text {
                 display: flex;
@@ -80,6 +109,7 @@
                 padding-bottom: 25px;
 
                 mat-divider {
+                    width: 100%;
                     background-color: #DADADA;
                     max-width: 127px;
                 }

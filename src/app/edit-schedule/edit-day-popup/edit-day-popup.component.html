@@ -7,37 +7,33 @@
         {{ getDate(this.data.date) | date: 'd MMMM' }}
     </div>
 </div>
-<div class="main">
-    <div class="subject">
-        <mat-form-field>
-            <mat-select placeholder="Время">
-                @for (time of times; track time) {
-                    <mat-option [value]="time">{{time.name}}</mat-option>
-                }
-            </mat-select>
-        </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="Название предмета" value="">
-        </mat-form-field>
-        <div class="subject__footer">
-            <mat-form-field class="audience">
-                <input matInput placeholder="№ ауд." value="">
-            </mat-form-field>
-            <mat-form-field class="type">
-                <mat-select placeholder="Тип" [(ngModel)]="selectedType">
-                    @for (type of types; track type) {
-                        <mat-option [value]="type">{{type.name}}</mat-option>
-                    }
-                </mat-select>
-            </mat-form-field>
-            <mat-form-field>
-                <input matInput placeholder="Преподаватель" value="">
-            </mat-form-field>
-        </div>
+<div class="main" [formGroup]="subjectsForm">
+    <div formArrayName="subjects" class="subjects">
+        @for (subject of subjects.controls; track $index) {
+            <div class="subject" [formGroupName]="$index">
+                <mat-form-field>
+                    <input matInput formControlName="time" placeholder="Время">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput formControlName="name" placeholder="Название предмета">
+                </mat-form-field>
+                <div class="subject__footer">
+                    <mat-form-field class="room">
+                        <input matInput formControlName="room" placeholder="№ ауд.">
+                    </mat-form-field>
+                    <mat-form-field class="type">
+                        <input matInput formControlName="type" placeholder="Тип">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput formControlName="teacher" placeholder="Преподаватель">
+                    </mat-form-field>
+                </div>
+            </div>
+        }
     </div>
     <div class="add-subject">
         <mat-divider></mat-divider>
-        <div class="add-subject__button">
+        <div class="add-subject__button" (click)="addSubject()">
             <img src="../../../assets/images/plus.svg" alt="">
         </div>
         <mat-divider></mat-divider>
@@ -55,7 +51,7 @@
             <button class="save-button" (click)="onSave()">
                 Для всех дней
             </button>
-            <button class="clear-button">
+            <button class="clear-button" (click)="onDelete()">
                 <img src="../../../assets/images/delete.svg" alt="">
             </button>
         </div>
