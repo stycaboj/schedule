@@ -23,8 +23,7 @@ export class DayComponent {
     }
 
     public hasSubjects(): boolean {
-        return this.day().subjects.length > 0 && 
-               this.day().subjects.every(subject => subject !== undefined && subject !== null);
+        return this.day().subjects.length > 0 && this.day().subjects.every(subject => subject !== undefined && subject !== null);
     }
 
     public openEditDialog(): void {
@@ -32,5 +31,9 @@ export class DayComponent {
             width: '500px',
             data: this.day()
         });
+    }
+
+    private isExam(): boolean {
+        return true;
     }
 }

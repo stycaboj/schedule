@@ -13,6 +13,9 @@
     @if (hasSubjects()) {
         @for (subject of day().subjects; track subject.id; let dayIndex = $index) {
             <div class="card__main">
+                @if (subject.type === "Зачет" || subject.type === "Экзамен") {
+                    <img src="../../../../assets/images/bonet.svg" class="exam-icon">
+                }
                 <div class="time">
                     {{ subject.time }}
                 </div>

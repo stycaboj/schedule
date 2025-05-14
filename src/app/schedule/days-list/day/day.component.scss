@@ -55,6 +55,7 @@
 .card__main {
     display: flex;
     flex-direction: column;
+    position: relative;
     padding: 16px 24px 0 24px;
 
     &:last-child {
@@ -157,4 +158,11 @@
     @media (max-width: 767px) {
         font-size: 0.7rem;
     }
+}
+
+.exam-icon {
+    position: absolute;
+    right: 25px;
+    width: 18px;
+    height: 16px;
 }
