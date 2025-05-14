@@ -1,4 +1,4 @@
-<div class="card" [attr.data-subjects]="day().subjects.length">
+<div class="card" [attr.data-subjects]="day().subjects.length" [class.highlight-day]="isCurrentDay()">
     <div class="card__header">
         <div class="font-semibold flex items-center gap-[15px]">
             {{ (getDate(day().date) | date: 'EEEE') | titlecase }}
@@ -12,7 +12,7 @@
     </div>
     @if (hasSubjects()) {
         @for (subject of day().subjects; track subject.id; let dayIndex = $index) {
-            <div class="card__main">
+            <div class="card__main" [class.highlight-subject]="isCurrentSubject(subject.time)">
                 @if (subject.type === "Зачет" || subject.type === "Экзамен") {
                     <img src="../../../../assets/images/bonet.svg" class="exam-icon">
                 }

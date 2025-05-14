@@ -33,6 +33,24 @@ export class DayComponent {
         });
     }
 
+    public isCurrentDay(): boolean {
+        const today = new Date();
+        const dayDate = this.getDate(this.day().date);
+        return today.getDate() === dayDate.getDate() && today.getMonth() === dayDate.getMonth() && today.getFullYear() === dayDate.getFullYear();
+    }
+
+    public isCurrentSubject(time: string): boolean {
+        const now = new Date();
+        const [startTime, endTime] = time.split('-').map(t => {
+            const [hours, minutes] = t.trim().split(':').map(Number);
+            const date = new Date();
+            date.setHours(hours, minutes, 0, 0);
+            return date;
+        });
+
+        return now >= startTime && now <= endTime;
+    }
+
     private isExam(): boolean {
         return true;
     }

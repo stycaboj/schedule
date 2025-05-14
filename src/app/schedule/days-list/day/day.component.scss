@@ -26,6 +26,7 @@
 
     @media (max-width: 767px) {
         width: 300px;
+        padding-bottom: 10px;
     }
 }
 
@@ -57,11 +58,6 @@
     flex-direction: column;
     position: relative;
     padding: 16px 24px 0 24px;
-
-    &:last-child {
-        border-bottom-left-radius: 0.625rem;
-        border-bottom-right-radius: 0.625rem;
-    }
 
     .time {
         font-weight: 600;
@@ -162,7 +158,23 @@
 
 .exam-icon {
     position: absolute;
+    top: 23px;
     right: 25px;
     width: 18px;
     height: 16px;
+
+    @media (max-width: 767px) {
+        top: 15px;
+        right: 15px;
+        width: 14px;
+        height: 12px;
+    }
+}
+
+.highlight-day {
+    box-shadow: 0 3px 10px 2px #58afaf;
+}
+
+.highlight-subject {
+    background-color: #51A3A34D;
 }
