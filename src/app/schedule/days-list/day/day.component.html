@@ -1,0 +1,48 @@
+<div class="card" [attr.data-subjects]="day().subjects.length" [class.highlight-day]="isCurrentDay()">
+    <div class="card__header">
+        <div class="font-semibold flex items-center gap-[15px]">
+            {{ (getDate(day().date) | date: 'EEEE') | titlecase }}
+            @if (isEdit()) {
+                <img src="../../../../assets/images/edit-icon.svg" alt="" class="edit-icon" (click)="openEditDialog()">
+            }
+        </div>
+        <div class="font-semibold opacity-50">
+            {{ getDate(day().date) | date: 'd MMMM' }}
+        </div>
+    </div>
+    @if (hasSubjects()) {
+        @for (subject of day().subjects; track subject.id; let dayIndex = $index) {
+            <div class="card__main" [class.highlight-subject]="isCurrentSubject(subject.time)">
+                @if (subject.type === "Зачет" || subject.type === "Экзамен") {
+                    <img src="../../../../assets/images/bonet.svg" class="exam-icon">
+                }
+                <div class="time">
+                    {{ subject.time }}
+                </div>
+                <div class="name">
+                    {{ subject.name }}
+                </div>
+                <div class="details">
+                    <div class="font-medium">
+                        {{ subject.room }}
+                    </div>
+                    <div class="subject-divider"></div>
+                    <div>
+                        {{ subject.type }}
+                    </div>
+                    <div class="subject-divider"></div>
+                    <div>
+                        {{ subject.teacher }}
+                    </div>
+                </div>
+            @if ($index < day().subjects.length - 1) {
+                <mat-divider class="divider"></mat-divider>
+            }
+            </div>
+        }
+    } @else {
+        <div class="empty-state">
+            Пар нет
+        </div>
+    }
+</div>

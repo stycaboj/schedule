@@ -1,0 +1,180 @@
+@import '../../schedule.component.scss';
+
+:host {
+    display: flex;
+    box-sizing: border-box;
+    height: 100%;
+
+    .edit-icon:hover {
+        cursor: pointer;
+    }
+}
+
+.card {
+    border-radius: 0.625rem;
+    padding-bottom: 40px;
+    height: 100%;
+    max-height: 415px;
+
+    &[data-subjects="4"] {
+        max-height: 530px;
+    }
+
+    &[data-subjects="5"] {
+        max-height: 645px;
+    }
+
+    @media (max-width: 767px) {
+        width: 300px;
+        padding-bottom: 20px;
+    }
+}
+
+.card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1.5625rem;
+    padding-right: 32px;
+    height: 3.75rem;
+    width: 22.5rem;
+    border-top-left-radius: 0.625rem;
+    border-top-right-radius: 0.625rem;
+
+    @media (min-width: 768px) {
+        font-size: 0.875rem;
+    }
+
+    @media (max-width: 767px) {
+        font-size: 0.625rem;
+        height: 36px;
+        width: 300px;
+        padding: 0 15px;
+    }
+}
+
+.card__main {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 16px 24px 0 24px;
+
+    .time {
+        font-weight: 600;
+        padding-top: 1px;
+
+        @media (min-width: 768px) {
+            font-size: 1.25rem;
+        }
+
+        @media (max-width: 767px) {
+            font-size: 0.875rem;
+        }
+    }
+
+    .name {
+        font-size: 0.875rem;
+        padding-top: 2px;
+
+        @media (max-width: 767px) {
+            font-size: 0.625rem;
+            padding-top: 0;
+        }
+    }
+
+    .details {
+        display: flex;
+        align-items: center;
+        padding-top: 4px;
+
+        @media (min-width: 768px) {
+            font-size: 0.875rem;
+        }
+
+        @media (max-width: 767px) {
+            font-size: 0.625rem;
+            padding-top: 2px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        padding: 10px 15px 0 15px;
+    }
+}
+
+.subject-divider {
+    opacity: 0.7;
+    border-radius: 9999px;
+
+    @media (min-width: 768px) {
+        height: 0.25rem;
+        width: 0.25rem;
+        margin-left: 0.625rem;
+        margin-right: 0.625rem;
+    }
+
+    @media (max-width: 767px) {
+        height: 0.125rem;
+        width: 0.125rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+:host ::ng-deep mat-divider {
+    margin-top: 18px !important;
+    width: 310px !important;
+    height: 1px;
+    color: #DADADA !important;
+    border: none;
+
+    @media (max-width: 767px) {
+        width: 270px !important;
+        margin-top: 10px !important;
+    }
+}
+
+.empty-state { // TODO: сделать отдельый компонент для эмпти стейта
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+
+    @media (min-width: 768px) {
+        font-size: 0.875rem;
+    }
+
+    @media (max-width: 767px) {
+        font-size: 0.7rem;
+    }
+}
+
+.exam-icon {
+    position: absolute;
+    top: 23px;
+    right: 25px;
+    width: 18px;
+    height: 16px;
+
+    @media (max-width: 767px) {
+        top: 15px;
+        right: 15px;
+        width: 14px;
+        height: 12px;
+    }
+}
+
+.highlight-day {
+    box-shadow: 0 3px 10px 2px #58afaf;
+}
+
+.highlight-subject {
+    background-color: #51A3A34D;
+}

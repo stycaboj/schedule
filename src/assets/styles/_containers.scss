@@ -1,0 +1,10 @@
+.inner-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 18.75rem;
+
+    @media (min-width: 768px) {
+        max-width: 72.5rem;
+    }
+}

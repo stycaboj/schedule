@@ -1,0 +1,17 @@
+:host .authored {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    &__icons {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        img {
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+.wrapper-container {
+    background-color: var(--header-background-color);
+    color: var(--text-color);
+    box-shadow: var(--header-shadow);
+}
+
+:host {    
+    @media (max-width: 768px) {
+        mat-form-field {
+            height: 30px;
+        }
+    }
+
+    .calendar-switcher {
+        display: flex;
+        align-items: center;
+        
+        &__button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            box-shadow: var(--card-shadow);
+            border-radius: 100px;
+        }
+
+        @media (max-width: 768px) {
+            img {
+                width: 15px;
+                height: 15px;
+            }
+
+            &__button {
+                width: 35px;
+                height: 35px;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        ::ng-deep .mat-mdc-form-field-infix {
+            margin-top: -5px !important;
+        }
+    }
+}

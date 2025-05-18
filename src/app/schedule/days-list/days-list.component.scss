@@ -1,0 +1,22 @@
+@import '../schedule.component.scss';
+
+:host {
+    justify-content: center;
+    flex: 1;
+    display: flex;
+}
+
+.inner-container {
+    display: grid;
+    align-items: stretch;
+    padding-bottom: 40px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    width: 100%;
+    grid-auto-rows: 1fr;
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+}

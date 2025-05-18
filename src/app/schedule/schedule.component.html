@@ -1,0 +1,9 @@
+<div class="wrapper-container flex flex-col items-center">
+    @if (days().length > 0) {
+        <app-days-list [days]="days()"></app-days-list>
+    } @else {
+        <div>
+            Расписание на этой неделе отстутствует
+        </div>
+    }
+</div>

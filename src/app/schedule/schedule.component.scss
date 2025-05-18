@@ -1,0 +1,49 @@
+:host {
+    display: flex;
+    flex: 1;
+    width: 100%;
+}
+
+.wrapper-container {
+    display: flex;
+    width: 100%;
+    flex: 1;
+    justify-content: center;
+    padding-top: 40px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+
+    @media (max-width: 768px) {
+        padding-top: 25px;
+    }
+}
+
+.light-week {
+    opacity: var(--week-light-opacity);
+}
+
+.dark-week {
+    opacity: var(--week-dark-opacity);
+}
+
+.divider {
+    background-color: var(--mat-option-border-color);
+}
+
+.card {
+    box-shadow: var(--card-shadow);
+    background-color: var(--card-main-background-color);
+}
+
+.card__header {
+    background-color: var(--card-header-background-color);
+    color: var(--card-header-text-color);
+}
+
+.card__main {
+    background-color: var(--card-main-background-color);
+}
+
+.subject-divider {
+    background-color: var(--text-color);
+}
