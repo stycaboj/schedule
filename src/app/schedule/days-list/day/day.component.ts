@@ -41,6 +41,11 @@ export class DayComponent {
 
     public isCurrentSubject(time: string): boolean {
         const now = new Date();
+        
+        if (!this.isCurrentDay()) {
+            return false;
+        }
+
         const [startTime, endTime] = time.split('-').map(t => {
             const [hours, minutes] = t.trim().split(':').map(Number);
             const date = new Date();
