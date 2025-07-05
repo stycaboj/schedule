@@ -93,3 +93,107 @@
 .mat-mdc-dialog-panel {
     min-height: 500px;
 }
+
+.cdk-overlay-container {
+    background-color: #1E1E1E80;
+}
+
+.mat-datepicker-popup {
+    top: 2% !important;
+    left: 18% !important;
+    border-radius: 30px;
+}
+
+.mat-datepicker-content .mat-calendar {
+    width: 1160px !important;
+    height: 868px !important;
+}
+
+.mat-calendar-header {
+    background-color: var(--mat-calendar-header-color);
+    border-bottom: 1px solid #DADADA;
+    height: 84px;
+    border-radius: 15px 15px 0 0;
+}
+
+.mat-calendar-controls {
+    transform: translateY(15px);
+    margin: 0 !important;
+}
+
+.mat-calendar-previous-button {
+    transform: translateX(-985px);
+}
+
+.mat-calendar-next-button {
+    transform: translateX(-75px);
+}
+
+.mat-calendar-body-cell {
+    border-radius: 100%;
+    width: 90px !important;
+    height: 90px !important;
+    background-color: var(--mat-calendar-cell-background-color) !important;
+    box-shadow: var(--card-shadow);
+}
+
+.mat-calendar-table-header tr th span {
+    font-size: 20px !important;
+    font-weight: 600 !important;
+}
+
+.mat-calendar-table {
+    margin-top: 40px;
+}
+
+.mat-calendar-period-button {
+    visibility: hidden;
+}
+
+.mat-calendar-body-cell-content {
+    width: 90px !important;
+    height: 90px !important;
+    font-size: 25px !important;
+    font-weight: 600 !important;
+    color: var(--text-color) !important;
+    transform: translate(-5px, -5px);
+}
+
+.mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover>.mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
+    background-color: transparent !important;
+}
+
+.mat-calendar-table td[role="gridcell"] {
+    width: 120px !important;
+    height: 120px !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+
+.mat-calendar-body-label {
+    width: 120px !important;
+    height: 120px !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 20px !important;
+    font-weight: 600 !important;
+    color: var(--text-color) !important;
+    pointer-events: none;
+    transform: translate(500px, -180px);
+    text-transform: none !important;
+    font-variant: normal !important;
+}
+
+.mat-calendar-body {
+    transform: translateX(36px);
+}
+
+.mat-calendar-body-today:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
+    border: none;
+}
+
+.mat-calendar-body-selected {
+    background-color: var(--header-background-color) !important;
+}

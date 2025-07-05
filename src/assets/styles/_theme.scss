@@ -18,6 +18,12 @@
     --card-header-background-color: #{$white-color};
     --card-header-text-color: #{$black-color};
     --card-main-background-color: #{$gray-color};
+
+    --mat-datepicker-calendar-header-text-color: #959595;
+    --mat-datepicker-calendar-container-background-color: #{$gray-color};;
+    
+    --mat-calendar-header-color: #{$white-color};
+    --mat-calendar-cell-background-color: #{$white-color};
 }
 
 .dark-theme {
@@ -40,4 +46,9 @@
     --card-header-background-color: #{$c-gray-color};
     --card-header-text-color: #{$white-color};
     --card-main-background-color: #{$gray-color};
+
+    --mat-datepicker-calendar-header-text-color: #959595;
+
+    --mat-calendar-header-color: #{$white-color};
+    --mat-calendar-cell-background-color: #{$white-color};
 }
